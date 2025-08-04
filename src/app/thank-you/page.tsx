@@ -72,24 +72,7 @@ export default function ThankYouPage() {
         </div>
       </main>
       
-      {/* Google Ads Conversion Tracking */}
-      <Script
-        id="google-tag-manager"
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17434253820"
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17434253820');
-          `
-        }}
-      />
+
     </div>
   );
 }

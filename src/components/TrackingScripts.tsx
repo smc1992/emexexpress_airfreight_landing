@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 interface TrackingScriptsProps {
   gaId?: string;
+  adsId?: string; // Added for Google Ads
   fbPixelId?: string;
   gtmId?: string;
 }
@@ -19,6 +20,7 @@ declare global {
 
 export default function TrackingScripts({
   gaId = process.env.NEXT_PUBLIC_GA_ID,
+  adsId = process.env.NEXT_PUBLIC_ADS_ID, // Added for Google Ads
   fbPixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID,
   gtmId = process.env.NEXT_PUBLIC_GTM_ID
 }: TrackingScriptsProps) {
@@ -59,6 +61,24 @@ export default function TrackingScripts({
         strategy="afterInteractive"
         referrerPolicy="origin"
       />
+
+      {/* Google Ads */} 
+      {adsId && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${adsId}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-ads" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${adsId}');
+            `}
+          </Script>
+        </>
+      )}
 
       {/* Google Analytics GA4 */}
       {gaId && (
