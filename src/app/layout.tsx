@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   title: "EMEX EXPRESS - Air Freight Solutions",
   description: "Your trusted partner for time-critical and oversized air freight solutions. Located at Frankfurt Airport, serving clients worldwide.",
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: "/icon.png?v=2",
+    apple: "/icon.png?v=2",
   },
 };
 
