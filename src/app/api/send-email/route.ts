@@ -3,6 +3,10 @@ import nodemailer from 'nodemailer';
 import fs from 'fs';
 import path from 'path';
 
+// Base URL for assets in emails - falls back to default if not set in environment
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://airfreight.emexexpress.de';
+const LOGO_URL = `${BASE_URL}/LOGO.png`;
+
 // Function to generate a unique tracking ID
 function generateTrackingId(): string {
   const timestamp = Date.now();
@@ -158,7 +162,7 @@ export async function POST(request: Request) {
       <body>
         <div class="container">
           <div class="header">
-            <img src="https://emexexpress.de/LOGO.png" alt="EMEX Express Logo" class="logo">
+            <img src="${LOGO_URL}" alt="EMEX Express Logo" class="logo">
           </div>
           
           <div class="tracking-box">
@@ -351,7 +355,7 @@ export async function POST(request: Request) {
       <body>
         <div class="container">
           <div class="header">
-            <img src="https://emexexpress.de/LOGO.png" alt="EMEX Express Logo" class="logo">
+            <img src="${LOGO_URL}" alt="EMEX Express Logo" class="logo">
           </div>
           
           <div class="tracking-box">

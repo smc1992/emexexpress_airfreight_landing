@@ -53,6 +53,13 @@ export default function TrackingScripts({
 
   return (
     <>
+      {/* CCM19 Cookie Banner */}
+      <Script
+        src="https://cloud.ccm19.de/app.js?apiKey=311a0210ec4af246f7683534b2dc8941ff7132244f2983ce&domain=6890a3c64c6a03b2e4048e02"
+        strategy="afterInteractive"
+        referrerPolicy="origin"
+      />
+
       {/* Google Analytics GA4 */}
       {gaId && (
         <>
