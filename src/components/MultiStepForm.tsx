@@ -145,7 +145,7 @@ const Step2RouteInformation = ({
   });
   const [showValidationMessage, setShowValidationMessage] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     updateFormData({ [name]: value });
     
@@ -300,7 +300,7 @@ const Step3ShipmentDetails = ({ formData, updateFormData, nextStep, prevStep }: 
   });
   const [showValidationMessage, setShowValidationMessage] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     updateFormData({ [name]: value });
     
@@ -503,7 +503,7 @@ const Step4CustomerDetails = ({
   });
   const [showValidationMessage, setShowValidationMessage] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     updateFormData({ [name]: value });
     
