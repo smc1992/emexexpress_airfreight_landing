@@ -53,6 +53,12 @@ body {
   margin-right: auto;
 }
 
+/* Ensure section titles are dark on light backgrounds for readability */
+.bg-white .section-title,
+.bg-gray-100 .section-title {
+  color: #1a202c;
+}
+
 /* Jumingo-style Cards */
 .jumingo-card {
   background-color: white;
