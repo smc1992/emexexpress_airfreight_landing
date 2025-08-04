@@ -56,8 +56,8 @@ export async function POST(request: Request) {
       port: 587, // Standard SMTP port for TLS
       secure: false, // true for 465, false for other ports
       auth: {
-        user: 'web.request@emexexpress.de',
-        pass: '@Eme2025@25@@'
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
       }
     });
 
