@@ -846,7 +846,7 @@ export default function MultiStepForm() {
   
   const totalSteps = 4;
   
-  const updateFormData = (newData) => {
+    const updateFormData = (newData: Partial<FormData>) => {
     setFormData((prevData) => ({ ...prevData, ...newData }));
   };
   
