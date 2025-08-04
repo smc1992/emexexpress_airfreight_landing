@@ -816,7 +816,7 @@ const SuccessStep = () => {
 };
 
 // Progress bar component
-const ProgressBar = ({ currentStep, totalSteps }) => {
+const ProgressBar = ({ currentStep, totalSteps }: { currentStep: number, totalSteps: number }) => {
   const progress = (currentStep / totalSteps) * 100;
   
   return (
