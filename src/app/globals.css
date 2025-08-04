@@ -55,7 +55,11 @@ body {
 
 /* Ensure section titles are dark on light backgrounds for readability */
 .bg-white .section-title,
-.bg-gray-100 .section-title {
+.bg-gray-100 .section-title,
+.bg-light-gray .section-title,
+.bg-white .section-subtitle,
+.bg-gray-100 .section-subtitle,
+.bg-light-gray .section-subtitle {
   color: #1a202c;
 }
 
