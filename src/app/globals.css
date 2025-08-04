@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #001E3C;
+  --primary-orange: #FF6700;
+  --section-padding: 4rem 0;
+  --card-border-radius: 0.5rem;
 }
 
 @theme inline {
@@ -22,5 +26,118 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Jumingo-style Layout */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Jumingo-style Cards */
+.jumingo-card {
+  background-color: white;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Force dark text in PainPoints component */
+.pain-point-card h3,
+.pain-point-card p,
+.pain-point-card span {
+  color: black !important;
+  font-weight: 600 !important;
+}
+
+.jumingo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section backgrounds */
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/* Gradient background for blue sections */
+.bg-gradient-blue-orange {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue) 70%, var(--primary-orange) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Animated gradient overlay */
+.bg-gradient-blue-orange::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue) 60%, var(--primary-orange) 100%);
+  z-index: -1;
+  opacity: 0;
+  animation: gradientShift 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% {
+    opacity: 0;
+    background-position: 0% 50%;
+  }
+  50% {
+    opacity: 1;
+    background-position: 100% 50%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 0% 50%;
+  }
+}
+
+.bg-light-gray {
+  background-color: #f8f9fa;
+}
+
+/* Buttons */
+.jumingo-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.jumingo-button-primary {
+  background-color: var(--primary-orange);
+  color: white;
+}
+
+.jumingo-button-primary:hover {
+  background-color: #e05a00;
 }

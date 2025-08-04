@@ -1,0 +1,65 @@
+/* Überschreibende Styles für Kontaktformular */
+
+/* Formular-Überschrift */
+.jumingo-card h3.text-2xl.font-bold.text-white {
+  color: #1A202C !important;
+  font-weight: 700 !important;
+}
+
+/* Alle Labels im Kontaktformular */
+#contact .jumingo-card label {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Spezifische Labels für alle Felder */
+#contact form label.block.text-sm.font-medium.text-white {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Spezifisch für First Name */
+label[for="firstName"] {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Spezifisch für Last Name */
+label[for="lastName"] {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Spezifisch für Email */
+label[for="email"] {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Spezifisch für Company */
+label[for="company"] {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Spezifisch für Phone */
+label[for="phone"] {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Spezifisch für Shipment Details */
+label[for="shipmentDetails"] {
+  color: #1A202C !important;
+  font-weight: 600 !important;
+}
+
+/* Allgemeine Überschreibung für alle Text-Elemente im Formular */
+.jumingo-card .inner * {
+  color: #1A202C !important;
+}
+
+/* Ausnahme für den Submit-Button */
+.jumingo-card .inner button {
+  color: #ffffff !important;
+}

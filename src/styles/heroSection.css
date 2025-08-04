@@ -1,0 +1,5 @@
+/* HeroSection spezifische Styles */
+.hero-section {
+  min-height: 40vh !important;
+  background-color: #001E3C !important;
+}

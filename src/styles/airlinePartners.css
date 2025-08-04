@@ -1,0 +1,12 @@
+/* Airline Partners Section Styles */
+.airline-partners-section {
+  background-color: #1A202C !important;
+}
+
+.airline-partners-section .card {
+  background-color: #1A202C !important;
+}
+
+.airline-partners-section h2 {
+  color: white !important;
+}

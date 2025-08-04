@@ -1,0 +1,34 @@
+/* Überschreibende Styles für PainPoints */
+[data-component-name="PainPoints"] h3,
+[data-component-name="PainPoints"] p,
+[data-component-name="PainPoints"] span {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+[data-component-name="PainPoints"] .jumingo-card {
+  background-color: white !important;
+}
+
+/* Spezifische Überschreibungen für jeden Texttyp */
+[data-component-name="PainPoints"] h3 {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+}
+
+[data-component-name="PainPoints"] p {
+  color: #000000 !important;
+  font-size: 1rem !important;
+}
+
+/* Maximale Spezifität für Solution-Text */
+[data-component-name="PainPoints"] div div p {
+  color: #000000 !important;
+}
+
+/* Maximale Spezifität für Solution-Label */
+[data-component-name="PainPoints"] div div p span {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}

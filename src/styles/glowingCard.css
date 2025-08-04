@@ -1,0 +1,238 @@
+
+:root {
+    /* vars */
+    --glow-sens: 30;
+    --card-bg: linear-gradient(8deg, var(--dark) 75%, color-mix(in hsl, var(--dark), white 2.5%) 75.5%);
+    --blend: soft-light;
+    --glow-blend: plus-lighter;
+    --glow-color: 24deg 100% 50%; /* EMEX EXPRESS orange (#FF6700) */
+    --dark: #001E3C; /* EMEX EXPRESS CI-Blau */
+    --fg: white;
+}
+
+.light .card {
+    --card-bg: linear-gradient(8deg, color-mix(in hsl, hsl(24, 100%, 98%), var(--dark) 2.5%) 75%, hsl(24, 100%, 98%) 75.5%);
+    --blend: darken;
+    --glow-blend: luminosity;
+    --glow-color: 24deg 100% 50%; /* EMEX EXPRESS orange (#FF6700) */
+    --fg: black; 
+    color: var(--fg); 
+}
+
+/* Add contrasting hover edge color */
+.card:hover > .glow::before {
+    box-shadow: 
+        inset 0 0 0 1px hsl( var(--glow-color) / 100%),
+        inset 0 0 2px 2px hsl( var(--glow-color) / 90%),
+        inset 0 0 5px 1px hsl( var(--glow-color) / 75%),
+        inset 0 0 8px 1px hsl( var(--glow-color) / 66%),
+        inset 0 0 15px 0 hsl( var(--glow-color) / 50%),
+        inset 0 0 25px 2px hsl( var(--glow-color) / 30%),
+        inset 0 0 50px 2px hsl( var(--glow-color) / 10%),
+
+        0 0 2px 2px hsl( var(--glow-color) / 90%),
+        0 0 5px 1px hsl( var(--glow-color) / 75%),
+        0 0 8px 1px hsl( var(--glow-color) / 66%),
+        0 0 15px 0 hsl( var(--glow-color) / 50%),
+        0 0 25px 2px hsl( var(--glow-color) / 30%),
+        0 0 50px 2px hsl( var(--glow-color) / 10%);
+    opacity: 1;
+}
+
+.card {
+    --pads: 20px;
+    --color-sens: calc(var(--glow-sens) + 20);
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25em;
+    isolation: isolate;
+    transform: translate3d(0, 0, 0.01px);
+    display: grid;
+    border: 1px solid rgb(255 255 255 / 25%);
+    background: var(--card-bg);
+    background-repeat: no-repeat;
+    
+    &::before,
+    &::after,
+    & > .glow {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        transition: opacity 0.25s ease-out;
+        z-index: -1;
+    }
+     
+    &:not(:hover):not(.animating) {
+        &::before,
+        &::after,
+        & > .glow {
+            opacity: 0;
+            transition: opacity 0.75s ease-in-out;
+        }
+    }
+    
+    &::before {
+        /* mesh gradient border */
+        border: 1px solid transparent;
+        
+        background:
+            linear-gradient(var(--card-bg) 0 100%) padding-box,
+            linear-gradient(rgb(255 255 255 / 0%) 0% 100%) border-box,
+            radial-gradient(at 80% 55%, hsla(24,100%,50%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 69% 34%, hsla(24,100%,60%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 8% 6%, hsla(24,100%,70%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 41% 38%, hsla(24,100%,55%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 86% 85%, hsla(24,100%,65%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 82% 18%, hsla(24,100%,45%,1) 0px, transparent 50%) border-box,
+            radial-gradient(at 51% 4%, hsla(24,100%,40%,1) 0px, transparent 50%) border-box,
+            linear-gradient(#FF6700 0 100%) border-box;
+        
+        /* opacity increases as pointer gets near edge */
+        opacity: calc((var(--pointer-d) - var(--color-sens)) / (100 - var(--color-sens)));
+        
+        /* border is masked to a cone, originating from the center towards the pointer */
+        mask-image: 
+            conic-gradient( 
+                from var(--pointer-°) at center, black 25%, transparent 40%, transparent 60%, black 75%
+            );
+    }
+    
+    &::after {
+        /* mesh gradient background */
+        border: 1px solid transparent;
+        
+        background:
+            radial-gradient(at 80% 55%, hsla(24,100%,50%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 69% 34%, hsla(24,100%,60%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 8% 6%, hsla(24,100%,70%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 41% 38%, hsla(24,100%,55%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 86% 85%, hsla(24,100%,65%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 82% 18%, hsla(24,100%,45%,1) 0px, transparent 50%) padding-box,
+            radial-gradient(at 51% 4%, hsla(24,100%,40%,1) 0px, transparent 50%) padding-box,
+            linear-gradient(#FF6700 0 100%) padding-box;
+        
+        /* 5 radial masks to create a squircle-cut-out, and then a cone-gradient 
+            originating from the center towards the pointer to highlight the edges */
+        mask-image:
+            linear-gradient( to bottom, black, black ),
+            radial-gradient( ellipse at 50% 50%, black 40%, transparent 65% ),
+            radial-gradient( ellipse at 66% 66%, black 5%, transparent 40% ),
+            radial-gradient( ellipse at 33% 33%, black 5%, transparent 40% ),
+            radial-gradient( ellipse at 66% 33%, black 5%, transparent 40% ),
+            radial-gradient( ellipse at 33% 66%, black 5%, transparent 40% ),
+            conic-gradient( from var(--pointer-°) at center, transparent 5%, black 15%, black 85%, transparent 95% );
+
+        mask-composite: subtract,add,add,add,add,add;
+        
+        /* opacity increases as pointer gets near edge */
+        opacity: calc((var(--pointer-d) - var(--color-sens)) / (100 - var(--color-sens)));
+        mix-blend-mode: var(--blend);
+    }
+    
+    & > .glow {
+        /* glowing border edges */
+        --outset: var(--pads);
+        
+        /* outer padding so the glow can overflow the element without being masked */
+        inset: calc(var(--outset) * -1);
+        pointer-events: none;
+        z-index: 1;
+        
+        /* glow is masked to a cone, originating from the center towards the pointer */
+        mask-image: 
+            conic-gradient( 
+                from var(--pointer-°) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%
+            );
+        
+        /* opacity increases as pointer gets near edge */
+        opacity: calc((var(--pointer-d) - var(--glow-sens)) / (100 - var(--glow-sens)));
+        mix-blend-mode: var(--glow-blend);
+        
+        &::before {
+            content: "";
+            position: absolute;
+            inset: var(--outset);
+            border-radius: inherit;
+            box-shadow: 
+                inset 0 0 0 1px hsl( var(--glow-color) / 100%),
+                inset 0 0 2px 2px hsl( var(--glow-color) / 90%),
+                inset 0 0 5px 1px hsl( var(--glow-color) / 75%),
+                inset 0 0 8px 1px hsl( var(--glow-color) / 66%),
+                inset 0 0 15px 0 hsl( var(--glow-color) / 50%),
+                inset 0 0 25px 2px hsl( var(--glow-color) / 30%),
+                inset 0 0 50px 2px hsl( var(--glow-color) / 10%),
+
+                0 0 2px 2px hsl( var(--glow-color) / 90%),
+                0 0 5px 1px hsl( var(--glow-color) / 75%),
+                0 0 8px 1px hsl( var(--glow-color) / 66%),
+                0 0 15px 0 hsl( var(--glow-color) / 50%),
+                0 0 25px 2px hsl( var(--glow-color) / 30%),
+                0 0 50px 2px hsl( var(--glow-color) / 10%);
+        }
+    }
+}
+
+.card {
+    box-shadow: 
+        rgba(0, 0, 0, 0.1) 0px 1px 2px, 
+        rgba(0, 0, 0, 0.1) 0px 2px 4px, 
+        rgba(0, 0, 0, 0.1) 0px 4px 8px, 
+        rgba(0, 0, 0, 0.1) 0px 8px 16px, 
+        rgba(0, 0, 0, 0.1) 0px 16px 32px, 
+        rgba(0, 0, 0, 0.1) 0px 32px 64px;
+}
+
+.inner {
+    text-align: center;
+    h2 {
+        color: inherit;
+        font-weight: 500;
+        font-size: 1.25em;
+        margin-block: 0.5em;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 1em;
+    }
+    svg {
+        height: 24px;
+    }
+}
+
+.card .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    container-type: inline-size;
+    position: relative;
+    overflow: auto;
+    z-index: 1;
+    padding: 1.5rem;
+    color: var(--fg);
+}
+
+.card .content {
+    padding: 1em;
+    font-weight: 300;
+    text-align: left;
+    line-height: 1.4;
+    color: color-mix(in srgb, var(--fg), transparent 40%);
+    overflow: auto;
+    scrollbar-width: none;
+    mask-image: linear-gradient( to top, transparent 5px, black 2em);
+    
+    & em,
+    & strong {
+        color: color-mix(in srgb, var(--fg), transparent 20%);
+    }
+}
+
+/* EMEX EXPRESS specific styling */
+.card.emex {
+    --glow-color: 25deg 100% 50%; /* EMEX orange color */
+}

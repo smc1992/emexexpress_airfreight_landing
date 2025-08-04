@@ -1,0 +1,67 @@
+/* Einheitliche Kartenfarbe für alle Karten in allen Sektionen */
+
+/* Card-Komponenten in allen Sektionen */
+.card,
+.bg-white.rounded-lg,
+.bg-white.rounded-xl,
+.bg-gray-100.rounded-lg,
+.bg-gray-900.rounded-lg {
+  background-color: #001E3C !important;
+  border: 1px solid rgba(255, 103, 0, 0.2);
+}
+
+/* Spezifische Karten für WhyChooseUs und andere Sektionen */
+#why-us .bg-white,
+.bg-white.p-8.rounded-lg.shadow-md,
+.bg-white.rounded-lg.shadow-lg.p-6,
+.bg-white.rounded-xl.shadow-lg.p-8 {
+  background-color: #001E3C !important;
+}
+
+/* Textfarben für bessere Lesbarkeit auf allen Karten mit dunklem Hintergrund */
+.card h3,
+.card h4,
+.bg-\[\#001E3C\] h3,
+.bg-\[\#001E3C\] h4,
+.rounded-lg h3,
+.rounded-xl h3 {
+  color: #ffffff !important;
+}
+
+.card p,
+.bg-\[\#001E3C\] p,
+.rounded-lg p,
+.rounded-xl p {
+  color: #e0e0e0 !important;
+}
+
+/* Spezielle Anpassungen für farbige Texte in Karten */
+.card .text-gray-600,
+.card .text-gray-700,
+.card .text-gray-800,
+.card .text-gray-900,
+.rounded-lg .text-gray-600,
+.rounded-lg .text-gray-700,
+.rounded-lg .text-gray-800,
+.rounded-lg .text-gray-900,
+.rounded-xl .text-gray-600,
+.rounded-xl .text-gray-700,
+.rounded-xl .text-gray-800,
+.rounded-xl .text-gray-900 {
+  color: #e0e0e0 !important;
+}
+
+/* Farbige Hervorhebungen in Karten */
+.card .text-\[\#FF6700\],
+.rounded-lg .text-\[\#FF6700\],
+.rounded-xl .text-\[\#FF6700\] {
+  color: #FF6700 !important;
+}
+
+/* Sicherstellen, dass HeroSection-Texte nicht betroffen sind */
+.hero-section .text-gray-600,
+.hero-section .text-gray-700,
+.hero-section .text-gray-800,
+.hero-section .text-gray-900 {
+  color: initial !important;
+}

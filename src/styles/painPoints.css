@@ -1,0 +1,31 @@
+/* PainPoints spezifische Styles */
+.pain-point-card {
+  background-color: white !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.pain-point-title {
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  color: #000000 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.pain-point-description {
+  color: #000000 !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 1rem !important;
+}
+
+.pain-point-solution {
+  color: #000000 !important;
+  font-weight: 500 !important;
+}
+
+.pain-point-solution-label {
+  font-weight: 700 !important;
+  color: #000000 !important;
+}
