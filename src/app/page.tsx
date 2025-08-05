@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 // WhyChooseUs wurde entfernt
 import WhyChooseEmex from '@/components/WhyChooseEmex';
 import PainPoints from '@/components/PainPoints';
+import Testimonials from '@/components/Testimonials';
 import AirfreightScenarios from '@/components/AirfreightScenarios';
 import LogoSlider from '@/components/LogoSlider';
 import AboutSection from '@/components/AboutSection';
@@ -21,6 +22,7 @@ export default function Home() {
         <HeroSection />
         <WhyChooseEmex />
         <PainPoints />
+        <Testimonials />
         <AirfreightScenarios />
         <LogoSlider />
         <AboutSection />

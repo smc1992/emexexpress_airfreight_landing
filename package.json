@@ -17,6 +17,7 @@
     "nodemailer": "^7.0.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "swiper": "^11.2.10",
     "three": "^0.179.1"
   },
   "devDependencies": {
@@ -30,7 +31,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "netlify-cli": "^23.0.0",
-
     "tailwindcss": "^4",
     "typescript": "^5"
   }
