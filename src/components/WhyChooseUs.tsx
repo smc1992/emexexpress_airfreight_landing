@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import ScrollToContactButton from './ScrollToContactButton';
 
 export default function WhyChooseUs() {
   const features = [
@@ -86,6 +87,7 @@ export default function WhyChooseUs() {
             </motion.div>
           ))}
         </div>
+        <ScrollToContactButton />
       </div>
     </section>
   );

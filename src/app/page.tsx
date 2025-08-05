@@ -7,9 +7,11 @@ import PainPoints from '@/components/PainPoints';
 import AirfreightScenarios from '@/components/AirfreightScenarios';
 import LogoSlider from '@/components/LogoSlider';
 import AboutSection from '@/components/AboutSection';
-import ContactSection from '@/components/ContactSection';
+import RequestFormSection from '@/components/RequestFormSection';
+import ContactInfoSection from '@/components/ContactInfoSection';
 import ShippingDestinations from '@/components/ShippingDestinations';
 import Footer from '@/components/Footer';
+
 
 export default function Home() {
   return (
@@ -23,7 +25,8 @@ export default function Home() {
         <LogoSlider />
         <AboutSection />
         <ShippingDestinations />
-        <ContactSection />
+        <RequestFormSection />
+        <ContactInfoSection />
       </main>
       <Footer />
     </div>

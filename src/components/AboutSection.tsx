@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import ScrollToContactButton from './ScrollToContactButton';
 
 export default function AboutSection() {
   const features = [
@@ -60,23 +61,9 @@ export default function AboutSection() {
               "From first contact to final delivery — we deliver reliability."
             </motion.div>
             
-            <motion.div 
-              className="mt-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: false, amount: 0.5 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <a href="#contact" className="bg-[#FF6700] hover:bg-[#E05A00] text-white px-8 py-4 rounded-lg font-medium text-lg inline-block transition-all duration-300 shadow-lg hover:shadow-xl">
-                  Request a Personalized Quote
-                </a>
-              </motion.div>
-            </motion.div>
+            <div className="mt-10">
+              <ScrollToContactButton />
+            </div>
           </motion.div>
           
           <motion.div

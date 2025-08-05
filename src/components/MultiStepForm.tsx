@@ -56,8 +56,8 @@ const Step1ServiceSelection = ({
       exit={{ opacity: 0, x: -50 }}
       className="step-content"
     >
-      <h3 className="text-2xl font-bold text-white mb-6">Service Required</h3>
-      <p className="text-white mb-4">Select an option</p>
+      <h3 className="text-2xl font-bold text-gray-800 mb-6">Service Required</h3>
+      <p className="text-gray-800 mb-4">Select an option</p>
       
       <div className="flex flex-col space-y-3">
         <label className="flex items-center cursor-pointer">
@@ -68,7 +68,7 @@ const Step1ServiceSelection = ({
             checked={formData.service === "Airport to Airport"}
             onChange={() => handleServiceChange("Airport to Airport")}
           />
-          <span className="ml-2 text-white">Airport to Airport</span>
+          <span className="ml-2 text-gray-800">Airport to Airport</span>
         </label>
         
         <label className="flex items-center cursor-pointer">
@@ -79,7 +79,7 @@ const Step1ServiceSelection = ({
             checked={formData.service === "Airport to Door"}
             onChange={() => handleServiceChange("Airport to Door")}
           />
-          <span className="ml-2 text-white">Airport to Door</span>
+          <span className="ml-2 text-gray-800">Airport to Door</span>
         </label>
         
         <label className="flex items-center cursor-pointer">
@@ -90,7 +90,7 @@ const Step1ServiceSelection = ({
             checked={formData.service === "Door to Airport"}
             onChange={() => handleServiceChange("Door to Airport")}
           />
-          <span className="ml-2 text-white">Door to Airport</span>
+          <span className="ml-2 text-gray-800">Door to Airport</span>
         </label>
         
         <label className="flex items-center cursor-pointer">
@@ -101,7 +101,7 @@ const Step1ServiceSelection = ({
             checked={formData.service === "Door to Door: all inc."}
             onChange={() => handleServiceChange("Door to Door: all inc.")}
           />
-          <span className="ml-2 text-white">Door to Door: all inc.</span>
+          <span className="ml-2 text-gray-800">Door to Door: all inc.</span>
         </label>
       </div>
       
@@ -183,11 +183,11 @@ const Step2RouteInformation = ({
       exit={{ opacity: 0, x: -50 }}
       className="step-content"
     >
-      <h3 className="text-2xl font-bold text-white mb-6">Route Information</h3>
+      <h3 className="text-2xl font-bold text-gray-800 mb-6">Route Information</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
-          <label htmlFor="originCountry" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="originCountry" className="block text-sm font-medium text-gray-800 mb-1">
             Origin Country *
           </label>
           <input
@@ -205,7 +205,7 @@ const Step2RouteInformation = ({
         </div>
         
         <div>
-          <label htmlFor="destinationCountry" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="destinationCountry" className="block text-sm font-medium text-gray-800 mb-1">
             Destination Country *
           </label>
           <input
@@ -225,7 +225,7 @@ const Step2RouteInformation = ({
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div>
-          <label htmlFor="originAirport" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="originAirport" className="block text-sm font-medium text-gray-800 mb-1">
             Origin Airport (or 3 letters code) *
           </label>
           <input
@@ -243,7 +243,7 @@ const Step2RouteInformation = ({
         </div>
         
         <div>
-          <label htmlFor="destinationAirport" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="destinationAirport" className="block text-sm font-medium text-gray-800 mb-1">
             Destination Airport (or 3 letters code) *
           </label>
           <input
@@ -345,10 +345,10 @@ const Step3ShipmentDetails = ({ formData, updateFormData, nextStep, prevStep }: 
       exit={{ opacity: 0, x: -50 }}
       className="step-content"
     >
-      <h3 className="text-2xl font-bold text-white mb-6">Shipment Details</h3>
+      <h3 className="text-2xl font-bold text-gray-800 mb-6">Shipment Details</h3>
       
       <div className="mb-6">
-        <label htmlFor="shippingDate" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="shippingDate" className="block text-sm font-medium text-gray-800 mb-1">
           Shipping Date *
         </label>
         <input
@@ -367,7 +367,7 @@ const Step3ShipmentDetails = ({ formData, updateFormData, nextStep, prevStep }: 
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div>
-          <label htmlFor="grossWeight" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="grossWeight" className="block text-sm font-medium text-gray-800 mb-1">
             Gross Weight Kg *
           </label>
           <input
@@ -386,7 +386,7 @@ const Step3ShipmentDetails = ({ formData, updateFormData, nextStep, prevStep }: 
         </div>
         
         <div>
-          <label htmlFor="numberOfPieces" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="numberOfPieces" className="block text-sm font-medium text-gray-800 mb-1">
             No. of pcs.
           </label>
           <input
@@ -400,7 +400,7 @@ const Step3ShipmentDetails = ({ formData, updateFormData, nextStep, prevStep }: 
         </div>
         
         <div>
-          <label htmlFor="packageType" className="block text-sm font-medium text-white mb-1">
+          <label htmlFor="packageType" className="block text-sm font-medium text-gray-800 mb-1">
             Package type *
           </label>
           <select
@@ -425,7 +425,7 @@ const Step3ShipmentDetails = ({ formData, updateFormData, nextStep, prevStep }: 
       </div>
       
       <div className="mb-6">
-        <label htmlFor="commodity" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="commodity" className="block text-sm font-medium text-gray-800 mb-1">
           Commodity
         </label>
         <input
@@ -439,7 +439,7 @@ const Step3ShipmentDetails = ({ formData, updateFormData, nextStep, prevStep }: 
       </div>
       
       <div className="mb-6">
-        <label htmlFor="additionalDetails" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="additionalDetails" className="block text-sm font-medium text-gray-800 mb-1">
           If multiple pcs, list pcs, weights, dimensions & Loading address here
         </label>
         <textarea
@@ -627,10 +627,10 @@ const Step4CustomerDetails = ({
       exit={{ opacity: 0, x: -50 }}
       className="step-content"
     >
-      <h3 className="text-2xl font-bold text-white mb-6">Customer Details</h3>
+      <h3 className="text-2xl font-bold text-gray-800 mb-6">Customer Details</h3>
       
       <div className="mb-6">
-        <label htmlFor="fullName" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="fullName" className="block text-sm font-medium text-gray-800 mb-1">
           Full Name *
         </label>
         <input
@@ -648,7 +648,7 @@ const Step4CustomerDetails = ({
       </div>
       
       <div className="mb-6">
-        <label htmlFor="company" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="company" className="block text-sm font-medium text-gray-800 mb-1">
           Company Name *
         </label>
         <input
@@ -666,7 +666,7 @@ const Step4CustomerDetails = ({
       </div>
       
       <div className="mb-6">
-        <label htmlFor="email" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="email" className="block text-sm font-medium text-gray-800 mb-1">
           Email *
         </label>
         <input
@@ -684,7 +684,7 @@ const Step4CustomerDetails = ({
       </div>
       
       <div className="mb-6">
-        <label htmlFor="country" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="country" className="block text-sm font-medium text-gray-800 mb-1">
           Country *
         </label>
         <select
@@ -708,7 +708,7 @@ const Step4CustomerDetails = ({
       </div>
       
       <div className="mb-8">
-        <label htmlFor="phoneNumber" className="block text-sm font-medium text-white mb-1">
+        <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-800 mb-1">
           Phone Number *
         </label>
         <div className="flex">
@@ -793,8 +793,8 @@ const SuccessStep = () => {
         </svg>
       </motion.div>
       
-      <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
-      <p className="text-white mb-8">
+      <h3 className="text-2xl font-bold text-gray-800 mb-4">Thank You!</h3>
+      <p className="text-gray-800 mb-8">
         Your request has been submitted successfully. One of our experts will contact you shortly.
       </p>
       
@@ -822,8 +822,8 @@ const ProgressBar = ({ currentStep, totalSteps }: { currentStep: number, totalSt
   return (
     <div className="mb-8">
       <div className="flex justify-between mb-2">
-        <span className="text-sm font-medium text-white">Step {currentStep} of {totalSteps}</span>
-        <span className="text-sm font-medium text-white">{Math.round(progress)}%</span>
+        <span className="text-sm font-medium text-gray-800">Step {currentStep} of {totalSteps}</span>
+        <span className="text-sm font-medium text-gray-800">{Math.round(progress)}%</span>
       </div>
       <div className="w-full bg-gray-600 rounded-full h-2.5">
         <motion.div

@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ScrollToContactButton from './ScrollToContactButton';
 
 export default function AirfreightScenarios() {
   const scenarios = [
@@ -140,6 +141,8 @@ export default function AirfreightScenarios() {
             </motion.div>
           ))}
         </motion.div>
+
+        <ScrollToContactButton />
       </div>
     </section>
   );
