@@ -15,7 +15,7 @@ export default function RequestFormSection() {
           viewport={{ once: false, amount: 0.3 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Get Your Free Air Freight Assessment
+            Get Your Free Air Freight Quotation
           </h2>
           <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
             Tell us about your air freight needs and our experts will provide a tailored solution that saves you time and money.

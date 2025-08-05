@@ -13,7 +13,7 @@ export default function ScrollToContactButton() {
           whileHover={{ scale: 1.05, boxShadow: '0px 10px 20px rgba(255, 103, 0, 0.25)' }}
           whileTap={{ scale: 0.98 }}
         >
-          Get Your Free Assessment Now
+          Get Your Free Quotation Now
         </motion.button>
       </Link>
     </div>

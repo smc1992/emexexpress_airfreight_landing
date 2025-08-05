@@ -30,13 +30,13 @@ export default function Header() {
           
           {/* Navigation Links - Desktop */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#why-us" className="text-gray-700 hover:text-[#FF6700] font-medium transition-colors duration-200">
+            <Link href="/#why-us" className="text-gray-700 hover:text-[#FF6700] font-medium transition-colors duration-200">
               Why Choose Us
             </Link>
-            <Link href="#pain-points" className="text-gray-700 hover:text-[#FF6700] font-medium transition-colors duration-200">
+            <Link href="/#pain-points" className="text-gray-700 hover:text-[#FF6700] font-medium transition-colors duration-200">
               Industries
             </Link>
-            <Link href="#scenarios" className="text-gray-700 hover:text-[#FF6700] font-medium transition-colors duration-200">
+            <Link href="/#scenarios" className="text-gray-700 hover:text-[#FF6700] font-medium transition-colors duration-200">
               Airfreight Scenarios
             </Link>
             <div className="flex items-center space-x-3">
@@ -46,7 +46,7 @@ export default function Header() {
                 </svg>
                 +49 69 247455280
               </Link>
-              <Link href="#contact" className="bg-[#FF6700] hover:bg-[#E05A00] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
+              <Link href="/#contact" className="bg-[#FF6700] hover:bg-[#E05A00] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                 Get a Quote
               </Link>
             </div>
@@ -77,21 +77,21 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4 px-2">
               <Link 
-                href="#why-us" 
+                href="/#why-us" 
                 className="text-gray-700 hover:text-[#FF6700] font-medium py-2 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Why Choose Us
               </Link>
               <Link 
-                href="#pain-points" 
+                href="/#pain-points" 
                 className="text-gray-700 hover:text-[#FF6700] font-medium py-2 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Industries
               </Link>
               <Link 
-                href="#scenarios" 
+                href="/#scenarios" 
                 className="text-gray-700 hover:text-[#FF6700] font-medium py-2 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -109,7 +109,7 @@ export default function Header() {
                   +49 69 247455280
                 </Link>
                 <Link 
-                  href="#contact" 
+                  href="/#contact" 
                   className="bg-[#FF6700] hover:bg-[#E05A00] text-white px-6 py-3 rounded-lg font-medium text-center transition-colors duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >

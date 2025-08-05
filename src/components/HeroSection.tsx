@@ -86,7 +86,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10" style={{ marginTop: "-80px", position: "relative", top: "-40px" }}>
         {/* Key Features */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-12"
+          className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12"
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
@@ -95,12 +95,10 @@ export default function HeroSection() {
           animate="visible"
           transition={{ duration: 0.8, delay: 0.6 }}
         >
+          {/* Feature 1 */}
           <motion.div 
-            className="flex items-center justify-center space-x-3 p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-            }}
+            className="flex items-center space-x-4 p-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             whileHover={{ scale: 1.03, y: -5 }}
           >
             <motion.div 
@@ -112,18 +110,16 @@ export default function HeroSection() {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
               </svg>
             </motion.div>
-            <div>
+            <div className="text-left">
               <p className="text-lg font-bold text-white">Save up to 80%</p>
               <p className="text-sm text-gray-300">compared to direct bookings</p>
             </div>
           </motion.div>
           
+          {/* Feature 2 */}
           <motion.div 
-            className="flex items-center justify-center space-x-3 p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-            }}
+            className="flex items-center space-x-4 p-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             whileHover={{ scale: 1.03, y: -5 }}
           >
             <motion.div 
@@ -135,18 +131,16 @@ export default function HeroSection() {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
               </svg>
             </motion.div>
-            <div>
+            <div className="text-left">
               <p className="text-lg font-bold text-white">All-in-one-Platform</p>
               <p className="text-sm text-gray-300">compare, book & manage</p>
             </div>
           </motion.div>
           
+          {/* Feature 3 */}
           <motion.div 
-            className="flex items-center justify-center space-x-3 p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-            }}
+            className="flex items-center space-x-4 p-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             whileHover={{ scale: 1.03, y: -5 }}
           >
             <motion.div 
@@ -158,7 +152,7 @@ export default function HeroSection() {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
               </svg>
             </motion.div>
-            <div>
+            <div className="text-left">
               <p className="text-lg font-bold text-white">Total flexibility</p>
               <p className="text-sm text-gray-300">No contract commitment</p>
             </div>
@@ -179,7 +173,7 @@ export default function HeroSection() {
             className="inline-block"
           >
             <Link href="#contact" className="bg-[#FF6700] hover:bg-[#E05A00] text-white px-8 py-4 rounded-lg font-medium text-lg inline-block transition-all duration-300 shadow-lg hover:shadow-xl">
-              Get a Free Air Freight Assessment
+              Get a Free Air Freight Quotation
             </Link>
           </motion.div>
         </motion.div>
