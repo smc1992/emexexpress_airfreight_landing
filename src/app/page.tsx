@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
+import FreightDelaysSection from '@/components/FreightDelaysSection';
 // ShippingOffers wurde entfernt
 // WhyChooseUs wurde entfernt
 import WhyChooseEmex from '@/components/WhyChooseEmex';
@@ -20,6 +21,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <FreightDelaysSection />
         <WhyChooseEmex />
         <PainPoints />
         <Testimonials />
