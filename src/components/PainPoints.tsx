@@ -33,7 +33,10 @@ export default function PainPoints() {
     <section 
       id="pain-points" 
       className={styles.section}
-      style={{ backgroundImage: "url('/Background-contact section.webp')" }}
+      style={{ 
+        backgroundImage: "url('/Background-contact section.webp')",
+        paddingTop: '8rem'
+      }}
     >
       <div className={styles.overlay}></div>
       <div className={`${styles.container} section-container`}>

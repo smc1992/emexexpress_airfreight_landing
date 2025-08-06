@@ -83,7 +83,7 @@ export default function HeroSection() {
       </div>
 
       {/* Feature Cards and CTA */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10" style={{ marginTop: "-80px", position: "relative", top: "-40px" }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Key Features */}
         <motion.div 
           className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12"
