@@ -280,7 +280,7 @@ const Step2RouteInformation = ({
                     key={country}
                     className="px-4 py-2 cursor-pointer"
                     style={{
-                      color: '#1f2937',
+                      color: '#ffffff',
                       backgroundColor: 'transparent'
                     }}
                     onMouseEnter={(e) => {
@@ -288,7 +288,7 @@ const Step2RouteInformation = ({
                       e.currentTarget.style.backgroundColor = '#FF6700';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.color = '#1f2937';
+                      e.currentTarget.style.color = '#ffffff';
                       e.currentTarget.style.backgroundColor = 'transparent';
                     }}
                     onClick={() => {
