@@ -18,13 +18,18 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Image 
-                src="/LOGO.png" 
-                alt="EMEX EXPRESS Logo" 
-                width={300} 
-                height={300} 
-                className="py-2"
-              />
+              <div className="flex flex-col">
+                <Image 
+                  src="/LOGO.png" 
+                  alt="EMEX EXPRESS Logo" 
+                  width={300} 
+                  height={300} 
+                  className="py-2"
+                />
+                <span className="text-xs text-gray-500 font-medium -mt-2 ml-1">
+                  🇩🇪 Frankfurt, Germany
+                </span>
+              </div>
             </Link>
           </div>
           

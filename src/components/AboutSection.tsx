@@ -8,16 +8,16 @@ import ScrollToContactButton from './ScrollToContactButton';
 export default function AboutSection() {
   const features = [
     { 
-      icon: "🏢", 
-      text: "The Squaire 12 – Frankfurt Airport" 
+      icon: "🇩🇪", 
+      text: "German Excellence – Based at Frankfurt Airport, Europe's #1 Cargo Hub" 
     },
     { 
       icon: "✅", 
-      text: "IATA Certified · 25+ Years of Experience" 
+      text: "IATA Certified · 25+ Years of Experience · European Market Leader" 
     },
     { 
       icon: "🌐", 
-      text: "Global Partner Network · Fast-Track Customs Clearance" 
+      text: "From Europe to the World – Global Partner Network · Fast-Track Customs" 
     }
   ];
 
@@ -34,6 +34,10 @@ export default function AboutSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               About EMEX EXPRESS
             </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Your trusted German air cargo partner, operating from Frankfurt Airport – Europe's leading cargo hub. 
+              We connect businesses across Europe with destinations worldwide through our comprehensive airfreight solutions.
+            </p>
             
             <div className="space-y-6">
               {features.map((feature, index) => (

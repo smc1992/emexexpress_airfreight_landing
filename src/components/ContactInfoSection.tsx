@@ -17,16 +17,20 @@ export default function ContactInfoSection() {
             Contact Us Directly
           </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            We are here for you. Reach out to us via phone, email, or visit us at our Frankfurt Airport location.
+            🇩🇪 Based in Germany at Frankfurt Airport – Europe's leading cargo hub. 
+            We are here for you. Reach out to us via phone, email, or visit us at our location.
           </p>
           
           <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Our Location</h3>
-            <p className="text-gray-700 mb-2">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">🇩🇪 Our German Headquarters</h3>
+            <p className="text-gray-700 mb-2 font-semibold">
               The Squaire 12, Frankfurt Airport
             </p>
-            <p className="text-gray-700 mb-6">
-              60549 Frankfurt, Germany
+            <p className="text-gray-700 mb-2">
+              60549 Frankfurt am Main, Germany
+            </p>
+            <p className="text-sm text-[#FF6700] font-medium mb-6">
+              Located at Europe's #1 Cargo Hub
             </p>
             
             <div className="space-y-4 text-left">

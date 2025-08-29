@@ -7,9 +7,9 @@ import '../styles/whyChooseEmex.css';
 export default function WhyChooseEmex() {
   const features = [
     {
-      title: "Strategic FRA Location",
-      description: "Direct access to Europe's busiest cargo hub • Pickup from all Western European cities",
-      icon: "🏢"
+      title: "Strategic Frankfurt Location",
+      description: "Based in Germany at Europe's #1 cargo hub • Direct access to 300+ destinations worldwide • Serving all European markets",
+      icon: "🇩🇪"
     },
     {
       title: "24/7/365 Operations",
@@ -44,7 +44,7 @@ export default function WhyChooseEmex() {
           viewport={{ once: false, amount: 0.3 }}
         >
           <h2 className="section-title text-white">Why Choose EMEX EXPRESS?</h2>
-          <p className="section-subtitle text-white">We combine expertise, technology, and a global network to deliver exceptional airfreight solutions.</p>
+          <p className="section-subtitle text-white">As your German air cargo partner, we combine European expertise, advanced technology, and a global network to deliver exceptional airfreight solutions from the heart of Europe.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
