@@ -278,7 +278,18 @@ const Step2RouteInformation = ({
                 {filteredCountries.slice(0, 10).map((country) => (
                   <div
                     key={country}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-800"
+                    style={{
+                      color: '#374151'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = '#000000';
+                      e.currentTarget.style.backgroundColor = '#f3f4f6';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = '#374151';
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }}
                     onClick={() => {
                       updateFormData({ destinationCountry: country });
                       setDestinationSearch(country);
