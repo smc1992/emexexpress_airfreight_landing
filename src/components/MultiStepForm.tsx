@@ -278,16 +278,17 @@ const Step2RouteInformation = ({
                 {filteredCountries.slice(0, 10).map((country) => (
                   <div
                     key={country}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-800"
+                    className="px-4 py-2 cursor-pointer"
                     style={{
-                      color: '#374151'
+                      color: '#1f2937',
+                      backgroundColor: 'transparent'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.color = '#000000';
-                      e.currentTarget.style.backgroundColor = '#f3f4f6';
+                      e.currentTarget.style.color = '#ffffff';
+                      e.currentTarget.style.backgroundColor = '#FF6700';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.color = '#374151';
+                      e.currentTarget.style.color = '#1f2937';
                       e.currentTarget.style.backgroundColor = 'transparent';
                     }}
                     onClick={() => {
